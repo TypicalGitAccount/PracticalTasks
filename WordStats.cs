@@ -3,29 +3,6 @@ using System.Text.RegularExpressions;
 
 namespace Practice
 {
-    public class OccurenceAndPosition
-    {
-        public int occurence { get; set; }
-        private List<int[]> lineAndPosition;
-
-        public OccurenceAndPosition(int frequency, int lineNumber, int linePosition)
-        {
-            occurence = frequency;
-            lineAndPosition = new List<int[]>();
-            AddLineAndPosition(lineNumber, linePosition);
-        }
-
-        public void AddLineAndPosition(int lineNumber, int linePosition)
-        {
-            lineAndPosition.Add(new int[] { lineNumber, linePosition });
-        }
-
-        public List<int[]> GetLineAndPosition()
-        {
-            return lineAndPosition;
-        }
-    }
-
     public class WordStats
     {
         public SortedDictionary<string, OccurenceAndPosition> wordStatistics { get; private set; }
@@ -45,6 +22,7 @@ namespace Practice
                 {
                     output.AppendLine($"occurence in line {lineAndPosition[0]}; position in line - {lineAndPosition[1]}\n");
                 }
+
                 return output.ToString();
             }
 
@@ -60,12 +38,15 @@ namespace Practice
 
             Console.OutputEncoding = Encoding.Unicode;
             int lineCounter = 0;
+
             foreach (string line in File.ReadLines(filepath))
             {                 
                 int positionCounter = 0;
                 MatchCollection matches = Regex.Matches(line, @"[\p{L}a-zA-Z']*");
+
                 foreach (Match m in matches) {
                     string word = m.Value.ToLower();
+
                     if (String.IsNullOrEmpty(word) == false)
                     {
                         if (wordStatistics.ContainsKey(word))
@@ -83,7 +64,6 @@ namespace Practice
                 lineCounter += 1;
             }
         }
-
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();
@@ -92,6 +72,7 @@ namespace Practice
             {
                 output.Append($"Word - {pair.Key}; frequency in text - {pair.Value.occurence}.\n");
             }
+
             return output.ToString();
         }
     }
