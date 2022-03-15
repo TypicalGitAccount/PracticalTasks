@@ -5,11 +5,11 @@ namespace Practice
 {
     public class WordStats
     {
-        public SortedDictionary<string, OccurenceAndPosition> wordStatistics { get; private set; }
+        public Dictionary<string, OccurenceAndPosition> wordStatistics { get; private set; }
 
         public WordStats()
         {
-            wordStatistics = new SortedDictionary<string, OccurenceAndPosition>();
+            wordStatistics = new Dictionary<string, OccurenceAndPosition>();
         }
 
         public string GetFullStats(string word)
@@ -68,7 +68,7 @@ namespace Practice
         {
             StringBuilder output = new StringBuilder();
 
-            foreach(var pair in wordStatistics.Reverse())
+            foreach(var pair in wordStatistics.OrderByDescending(el => el.Value.occurence))
             {
                 output.Append($"Word - {pair.Key}; frequency in text - {pair.Value.occurence}.\n");
             }

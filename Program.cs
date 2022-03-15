@@ -1,5 +1,4 @@
-﻿using Practice;
-using System.Text;
+﻿using System.Text;
 
 namespace Practice {
     public class Program
@@ -23,7 +22,6 @@ namespace Practice {
             Console.WriteLine("Enter a word to recieve full stats on it:");
             Console.InputEncoding = Encoding.Unicode;
             string word = Console.ReadLine();
-
             Console.WriteLine(stats.GetFullStats(word.ToLower()));
             Console.ReadLine();
         }
