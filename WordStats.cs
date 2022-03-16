@@ -18,9 +18,9 @@ namespace Practice
             {
                 StringBuilder output = new StringBuilder($"Word {word} - occurs {wordStatistics[word].occurence} time(s) in text;\n");
 
-                foreach(int[] lineAndPosition in wordStatistics[word].GetLineAndPosition())
+                foreach(int[] lineAndPositionIndexes in wordStatistics[word].GetLineAndPosition())
                 {
-                    output.AppendLine($"occurence in line {lineAndPosition[0]}; position in line - {lineAndPosition[1]}\n");
+                    output.AppendLine($"occurence in line {lineAndPositionIndexes[0]+1}; position in line - {lineAndPositionIndexes[1]+1}\n");
                 }
 
                 return output.ToString();
@@ -52,7 +52,7 @@ namespace Practice
                         if (wordStatistics.ContainsKey(word))
                         {
                             wordStatistics[word].occurence = wordStatistics[word].occurence + 1;
-                            wordStatistics[word].AddLineAndPosition(lineCounter, positionCounter);
+                            wordStatistics[word].AddLineAndPositionIndexes(lineCounter, positionCounter);
                         }
                         else
                         {

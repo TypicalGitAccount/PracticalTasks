@@ -5,30 +5,30 @@ namespace Practice
     public class OccurenceAndPosition
     {
         public int occurence { get; set; }
-        private List<int[]> lineAndPosition;
+        private List<int[]> lineAndPositionIndexes;
 
         public OccurenceAndPosition(int frequency, int lineNumber, int linePosition)
         {
             occurence = frequency;
-            lineAndPosition = new List<int[]>();
-            AddLineAndPosition(lineNumber, linePosition);
+            lineAndPositionIndexes = new List<int[]>();
+            AddLineAndPositionIndexes(lineNumber, linePosition);
         }
 
-        public void AddLineAndPosition(int lineNumber, int linePosition)
+        public void AddLineAndPositionIndexes(int lineNumber, int linePosition)
         {
-            lineAndPosition.Add(new int[] { lineNumber, linePosition });
+            lineAndPositionIndexes.Add(new int[] { lineNumber, linePosition });
         }
 
         public List<int[]> GetLineAndPosition()
         {
-            return lineAndPosition;
+            return lineAndPositionIndexes;
         }
 
         public override string ToString()
         {
             StringBuilder output = new StringBuilder($"Occured in text - {occurence} times;\n");
 
-            foreach (var pair in lineAndPosition)
+            foreach (var pair in lineAndPositionIndexes)
             {
                 output.AppendLine($"Occurence in line {pair[0]}, position in line - {pair[1]}\n");
             }
