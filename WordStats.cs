@@ -16,11 +16,11 @@ namespace Practice
         {
             if (wordStatistics.ContainsKey(word))
             {
-                StringBuilder output = new StringBuilder($"Word {word} - occurs {wordStatistics[word].occurence} time(s) in text;\n");
+                var output = new StringBuilder($"Word {word} - occurs {wordStatistics[word].occurence} time(s) in text;\n");
 
-                foreach(int[] lineAndPositionIndexes in wordStatistics[word].GetLineAndPosition())
+                foreach(var lineAndPositionIndexes in wordStatistics[word].GetLineAndPosition())
                 {
-                    output.AppendLine($"occurence in line {lineAndPositionIndexes[0]+1}; position in line - {lineAndPositionIndexes[1]+1}\n");
+                    output.AppendLine($"occurence in line {lineAndPositionIndexes[0]+1}; position in line - {lineAndPositionIndexes[1]+1}");
                 }
 
                 return output.ToString();
@@ -29,23 +29,20 @@ namespace Practice
             return $"Word \'{word}\' does not apper in text.";
         }
 
-        public void gatherStats(string filepath)
+        public bool gatherStats(string filepath)
         {
             if (!File.Exists(filepath))
-            {
-                throw new FileNotFoundException($"No file on path \'{filepath}\' exists!");
-            }
+                return false;
 
-            Console.OutputEncoding = Encoding.Unicode;
-            int lineCounter = 0;
+            var lineCounter = 0;
 
-            foreach (string line in File.ReadLines(filepath))
+            foreach (var line in File.ReadLines(filepath))
             {                 
-                int positionCounter = 0;
+                var positionCounter = 0;
                 MatchCollection matches = Regex.Matches(line, @"[\p{L}a-zA-Z']*");
 
                 foreach (Match m in matches) {
-                    string word = m.Value.ToLower();
+                    var word = m.Value.ToLower();
 
                     if (String.IsNullOrEmpty(word) == false)
                     {
@@ -63,14 +60,17 @@ namespace Practice
                 }
                 lineCounter += 1;
             }
+
+            return true;
         }
+
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();
 
             foreach(var pair in wordStatistics.OrderByDescending(el => el.Value.occurence))
             {
-                output.Append($"Word - {pair.Key}; frequency in text - {pair.Value.occurence}.\n");
+                output.Append($"Word - {pair.Key}; occurences in text - {pair.Value.occurence}.\n");
             }
 
             return output.ToString();

@@ -26,7 +26,7 @@ namespace Practice
 
         public override string ToString()
         {
-            StringBuilder output = new StringBuilder($"Occured in text - {occurence} times;\n");
+            var output = new StringBuilder($"Occured in text - {occurence} times;\n");
 
             foreach (var pair in lineAndPositionIndexes)
             {
