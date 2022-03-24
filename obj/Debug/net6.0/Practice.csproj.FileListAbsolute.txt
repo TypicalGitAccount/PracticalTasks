@@ -1,0 +1,15 @@
+C:\Users\dimas\source\repos\Practice\bin\Debug\net6.0\Practice.exe
+C:\Users\dimas\source\repos\Practice\bin\Debug\net6.0\Practice.deps.json
+C:\Users\dimas\source\repos\Practice\bin\Debug\net6.0\Practice.runtimeconfig.json
+C:\Users\dimas\source\repos\Practice\bin\Debug\net6.0\Practice.dll
+C:\Users\dimas\source\repos\Practice\bin\Debug\net6.0\Practice.pdb
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\Practice.csproj.AssemblyReference.cache
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\Practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\Practice.AssemblyInfoInputs.cache
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\Practice.AssemblyInfo.cs
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\Practice.csproj.CoreCompileInputs.cache
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\Practice.dll
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\refint\Practice.dll
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\Practice.pdb
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\Practice.genruntimeconfig.cache
+C:\Users\dimas\source\repos\Practice\obj\Debug\net6.0\ref\Practice.dll
