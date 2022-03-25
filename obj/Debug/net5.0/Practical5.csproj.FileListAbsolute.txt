@@ -1,0 +1,16 @@
+C:\Users\dimas\source\repos\Practical5\bin\Debug\net5.0\Practical5.exe
+C:\Users\dimas\source\repos\Practical5\bin\Debug\net5.0\Practical5.deps.json
+C:\Users\dimas\source\repos\Practical5\bin\Debug\net5.0\Practical5.runtimeconfig.json
+C:\Users\dimas\source\repos\Practical5\bin\Debug\net5.0\Practical5.runtimeconfig.dev.json
+C:\Users\dimas\source\repos\Practical5\bin\Debug\net5.0\Practical5.dll
+C:\Users\dimas\source\repos\Practical5\bin\Debug\net5.0\Practical5.pdb
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\Practical5.csproj.AssemblyReference.cache
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\Practical5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\Practical5.AssemblyInfoInputs.cache
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\Practical5.AssemblyInfo.cs
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\Practical5.csproj.CoreCompileInputs.cache
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\Practical5.dll
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\refint\Practical5.dll
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\Practical5.pdb
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\Practical5.genruntimeconfig.cache
+C:\Users\dimas\source\repos\Practical5\obj\Debug\net5.0\ref\Practical5.dll
