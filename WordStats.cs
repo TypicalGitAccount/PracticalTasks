@@ -16,9 +16,14 @@ namespace Practice
             wordStatistics = new Dictionary<string, OccurenceAndPosition>();
         }
 
+        public bool Contain(string word)
+        {
+            return wordStatistics.ContainsKey(word);
+        }
+
         public string GetFullStats(string word)
         {
-            if (wordStatistics.ContainsKey(word))
+            if (Contain(word))
             {
                 var output = new StringBuilder($"Word \"{word}\" - occurs {wordStatistics[word].occurence} time(s) in text;\n");
 
