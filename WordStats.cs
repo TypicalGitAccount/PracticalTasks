@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Practice
@@ -16,7 +20,7 @@ namespace Practice
         {
             if (wordStatistics.ContainsKey(word))
             {
-                var output = new StringBuilder($"Word {word} - occurs {wordStatistics[word].occurence} time(s) in text;\n");
+                var output = new StringBuilder($"Word \"{word}\" - occurs {wordStatistics[word].occurence} time(s) in text;\n");
 
                 foreach(var lineAndPositionIndexes in wordStatistics[word].GetLineAndPosition())
                 {
@@ -70,7 +74,7 @@ namespace Practice
 
             foreach(var pair in wordStatistics.OrderByDescending(el => el.Value.occurence))
             {
-                output.Append($"Word - {pair.Key}; occurences in text - {pair.Value.occurence}.\n");
+                output.Append($"Word \"{pair.Key}\" occurs {pair.Value.occurence} time(s) in text.\n");
             }
 
             return output.ToString();

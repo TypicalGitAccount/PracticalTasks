@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dimas\\source\\repos\\Practical5\\Practical5.csproj",
-      "projectName": "Practical5",
-      "projectPath": "C:\\Users\\dimas\\source\\repos\\Practical5\\Practical5.csproj",
+      "projectUniqueName": "C:\\Users\\dimas\\source\\repos\\Practical\\Practical.csproj",
+      "projectName": "Practical",
+      "projectPath": "C:\\Users\\dimas\\source\\repos\\Practical\\Practical.csproj",
       "packagesPath": "C:\\Users\\dimas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dimas\\source\\repos\\Practical5\\obj\\",
+      "outputPath": "C:\\Users\\dimas\\source\\repos\\Practical\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

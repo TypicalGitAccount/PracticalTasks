@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace Practice {
     public class Program
@@ -21,9 +22,9 @@ namespace Practice {
             var stats = new WordStats();
             Console.WriteLine("Enter your filepath:");
             var filepath = notNullInput(warningMessage: "Filepath can\'t be null or empty string!");
-            if (!stats.gatherStats(filepath)) {
+            while(!stats.gatherStats(filepath)) {
                 Console.WriteLine($"No file with path \'{filepath}\' exists!");
-                return;
+                filepath = notNullInput(warningMessage: "Filepath can\'t be null or empty string!");
             }
             Console.WriteLine(stats);
             Console.WriteLine("Enter a word to recieve full stats on it:");
