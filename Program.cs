@@ -27,14 +27,22 @@ namespace Practice {
                 filepath = notNullInput(warningMessage: "Filepath can\'t be null or empty string!");
             }
             Console.WriteLine(stats);
-            Console.WriteLine("Enter a word to recieve full stats on it:");
-            var word = notNullInput(warningMessage: "Word can\'t be null or empty string!");
-            while(!stats.Contain(word))
+            while (true)
             {
-                Console.WriteLine($"No \"{word}\" word found in stats! Please Choose another one.");
-                word = notNullInput(warningMessage: "Word can\'t be null or empty string!");
+                Console.WriteLine("Enter a word to recieve full stats on it; enter \"exit\" to stop the program.");
+                var word = notNullInput(warningMessage: "Word can\'t be null or empty string!");
+                if (word == "exit")
+                    return;
+                if (!stats.Contain(word))
+                {
+                    Console.WriteLine($"No \"{word}\" word found in stats! Please Choose another one.");
+                }
+                else
+                {
+                    Console.WriteLine(stats.GetFullStats(word.ToLower()));
+                }
+                
             }
-            Console.WriteLine(stats.GetFullStats(word.ToLower()));
             Console.ReadLine();
         }
     }
